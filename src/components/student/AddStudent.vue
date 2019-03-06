@@ -2,12 +2,12 @@
     <div>
         添加学生：
         <input type="text" v-model="name">
-        <button @click="add">确认添加</button>
+        <button @click="changeStudent({name, number:1})">确认添加</button>
     </div>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapActions } from "vuex";
 
 export default {
     data() {
@@ -23,16 +23,18 @@ export default {
             storeLook: state => state.look
         }),
 
-        a() {
-            return "111";
-        }
+        // a() {
+        //     return "111";
+        // }
     },
     methods: {
-        add() {
-            // this.bus.$emit("add", this.name);
+        ...mapActions (['changeStudent'])
+        // add() {
+        //     this.bus.$emit("add", this.name);
 
-            this.$store.state.studentList.push(this.name);
-        }
+        //     this.$store.state.studentList.push(this.name);
+        //     this.$store.dispatch('changeStudent', {name:this.name, number: 1});
+        // }
     }
     // computed: {
     //     storeName() {

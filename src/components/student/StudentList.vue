@@ -17,11 +17,11 @@
 import { mapState, mapGetters } from 'vuex';
 export default {
     // props: ['student-list']
-    data () {
-        return {
-            // studentList: []
-        }
-    },
+    // data () {
+    //     return {
+    //         // studentList: []
+    //     }
+    // },
     computed: {
         ...mapState(['studentList']),
         ...mapGetters({
@@ -29,9 +29,9 @@ export default {
         }),
         // ...mapGetters(['newStudents']),
 
-        newstudent () {
-            return this.$store.getters.newstudent
-        }
+        // newstudent () {
+        //     return this.$store.getters.newstudent
+        // }
     },
     created () {
         this.bus.$on('add', name => {
