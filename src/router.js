@@ -24,6 +24,7 @@ const Download = () =>import('./components/community/Download')
 const Personal = () =>import('./components/community/Personal')
 const Question = () =>import('./components/Qusetion')
 const Err = () =>import('./components/Err')
+const ChangeCourse = () =>import('./components/ChangeCourse')
 
 Vue.use(Router)
 
@@ -100,6 +101,11 @@ export default new Router({
       path: '/err.html',
       name: 'err',
       component : Err
+    },
+    {
+      path: '/learn/ChangeCourse',
+      name: 'changeCourse',
+      component : ChangeCourse
     },
     {
       path:'*',

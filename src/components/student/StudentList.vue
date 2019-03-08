@@ -23,8 +23,8 @@ export default {
     //     }
     // },
     computed: {
-        ...mapState(['studentList']),
-        ...mapGetters({
+        ...mapState('student',['studentList']),
+        ...mapGetters('student',{
             student: 'newStudent'
         }),
         // ...mapGetters(['newStudents']),

@@ -57,14 +57,15 @@
     cursor: pointer;
 }
 .footer {
-    position: fixed;
-    bottom: 0;
+    /* position: fixed;
+    bottom: 0; */
     width: 100%;
     height: 150px;
     background-color: #000;
 }
 .router-view{
     width:1000px;
+    min-height: 500px;
     margin: 0 auto;
     padding-top: 40px;
 }
